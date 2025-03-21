@@ -27,7 +27,6 @@ Developed by **Tojin Varkey Simson** and **Jaiby Joepsh**, Trackyyy combines cut
 - **Intelligent Categorization**: Automatically categorize expenses with >90% accuracy
 - **Spending Pattern Recognition**: Identify trends and recurring expenses automatically
 - **Anomaly Detection**: Flag unusual transactions that may indicate fraud
-- **Predictive Analysis**: Get forecasts of upcoming expenses based on your history
 
 ### 📱 Modern User Experience
 - **Beautiful Material Design 3 Interface**: Clean, intuitive UI with visually appealing components
@@ -44,7 +43,6 @@ Developed by **Tojin Varkey Simson** and **Jaiby Joepsh**, Trackyyy combines cut
 - **Goal Setting**: Create and track progress towards savings and spending goals
 
 ### 🔒 Security & Privacy
-- **Biometric Authentication**: Secure access with fingerprint or face recognition
 - **On-Device Processing**: Sensitive financial data processed locally on your device
 - **End-to-End Encryption**: All cloud data secured with industry-standard encryption
 - **Privacy Controls**: Granular permissions for data sharing and analysis
@@ -65,10 +63,6 @@ Developed by **Tojin Varkey Simson** and **Jaiby Joepsh**, Trackyyy combines cut
 - 100MB of free storage space
 - Camera access for receipt scanning
 
-### From Google Play Store
-1. Visit the [Google Play Store](https://play.google.com/store/apps/details?id=com.fiu.trackyyy)
-2. Click "Install"
-3. Open the app and follow the onboarding process
 
 ### From GitHub Releases
 1. Download the latest APK from the [Releases](https://github.com/fiu-team/trackyyy/releases) page
@@ -79,7 +73,7 @@ Developed by **Tojin Varkey Simson** and **Jaiby Joepsh**, Trackyyy combines cut
 ### Building from Source
 ```bash
 # Clone the repository
-git clone https://github.com/fiu-team/trackyyy.git
+git clone https://github.com/TechieTojin/InnovateX-tojin-jaiby
 
 # Navigate to the project directory
 cd trackyyy
@@ -104,7 +98,6 @@ cd trackyyy
 - **Computer Vision**: Google ML Kit for OCR and receipt parsing
 - **NLP**: TensorFlow Lite for text classification and entity extraction
 - **Machine Learning**: On-device models for categorization and prediction
-- **Voice Processing**: Android Speech Recognition API
 
 ### Backend & Data
 - **Database**: Room for local storage
@@ -152,5 +145,5 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ---
 
 <p align="center">
-  Made with ❤️ by Tojin Varkey Simson and Jaiby Joepsh
+  Made  by Tojin Varkey Simson and Jaiby Joepsh
 </p>
