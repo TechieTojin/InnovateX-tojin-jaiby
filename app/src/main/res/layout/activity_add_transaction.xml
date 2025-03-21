@@ -1,0 +1,1098 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background">
+
+    <!-- Top App Bar with Gradient -->
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        app:elevation="0dp">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/primary"
+            android:elevation="8dp"
+            app:navigationIcon="@android:drawable/ic_menu_close_clear_cancel"
+            app:title="New Transaction"
+            app:titleTextColor="@android:color/white"
+            app:titleCentered="true"
+            app:titleTextAppearance="@style/TextAppearance.MaterialComponents.Headline6"/>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:overScrollMode="never"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <!-- Transaction Type Toggle with Icons -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="24dp"
+                app:cardElevation="8dp"
+                android:layout_marginBottom="24dp">
+
+                <com.google.android.material.tabs.TabLayout
+                    android:id="@+id/transaction_type_toggle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:tabMode="fixed"
+                    app:tabGravity="fill"
+                    app:tabSelectedTextColor="@color/primary"
+                    app:tabIndicatorColor="@color/primary"
+                    app:tabTextColor="@color/text_hint_color"
+                    app:tabIndicatorHeight="3dp"
+                    app:tabIconTint="@color/primary"
+                    app:tabRippleColor="#33000000"
+                    app:tabIndicatorAnimationMode="elastic"
+                    app:tabIndicatorFullWidth="false"
+                    app:tabTextAppearance="@style/TextAppearance.MaterialComponents.Subtitle1">
+
+                    <com.google.android.material.tabs.TabItem
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Expense"
+                        android:icon="@android:drawable/arrow_down_float"/>
+
+                    <com.google.android.material.tabs.TabItem
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Income"
+                        android:icon="@android:drawable/arrow_up_float"/>
+
+                    <com.google.android.material.tabs.TabItem
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Transfer"
+                        android:icon="@android:drawable/ic_menu_share"/>
+
+                </com.google.android.material.tabs.TabLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Amount with Currency Selection -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="AMOUNT"
+                android:textStyle="bold"
+                android:textSize="14sp"
+                android:textColor="@color/primary"
+                android:layout_marginBottom="8dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="24dp">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.3"
+                    android:hint="Currency"
+                    app:startIconDrawable="@android:drawable/ic_menu_sort_by_size"
+                    app:startIconTint="@color/primary"
+                    android:layout_marginEnd="8dp"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu">
+
+                    <AutoCompleteTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="USD"
+                        android:inputType="none"/>
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.7"
+                    android:orientation="horizontal">
+                    
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:hint="Amount"
+                        app:startIconDrawable="@android:drawable/ic_menu_edit"
+                        app:startIconTint="@color/primary"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="numberDecimal"
+                            android:textSize="24sp"
+                            android:textStyle="bold"/>
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.floatingactionbutton.FloatingActionButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="8dp"
+                        app:fabSize="mini"
+                        app:tint="@android:color/white"
+                        android:backgroundTint="@color/primary"
+                        android:src="@android:drawable/ic_btn_speak_now"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- Account Selection -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ACCOUNT"
+                android:textStyle="bold"
+                android:textSize="14sp"
+                android:textColor="@color/primary"
+                android:layout_marginBottom="8dp"/>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Select Account"
+                app:startIconDrawable="@android:drawable/ic_menu_myplaces"
+                app:startIconTint="@color/primary"
+                android:layout_marginBottom="24dp"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu">
+
+                <AutoCompleteTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Checking Account"
+                    android:inputType="none"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Payment Method -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="PAYMENT METHOD"
+                android:textStyle="bold"
+                android:textSize="14sp"
+                android:textColor="@color/primary"
+                android:layout_marginBottom="8dp"/>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Select Payment Method"
+                app:startIconDrawable="@android:drawable/ic_menu_send"
+                app:startIconTint="@color/primary"
+                android:layout_marginBottom="24dp"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu">
+
+                <AutoCompleteTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Credit Card"
+                    android:inputType="none"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Category with Icon Grid -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="CATEGORY"
+                android:textStyle="bold"
+                android:textSize="14sp"
+                android:textColor="@color/primary"
+                android:layout_marginBottom="8dp"/>
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="24dp"
+                app:cardElevation="2dp"
+                app:strokeWidth="0dp"
+                android:layout_marginBottom="24dp">
+                
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+                    
+                    <GridLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:columnCount="4"
+                        android:rowCount="2"
+                        android:padding="8dp">
+                        
+                        <!-- Food -->
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_columnWeight="1"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:padding="8dp"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:background="?attr/selectableItemBackground">
+                            
+                            <FrameLayout
+                                android:layout_width="56dp"
+                                android:layout_height="56dp">
+                                
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:background="@android:color/holo_red_light"
+                                    android:alpha="0.7"
+                                    android:text="🍽️"
+                                    android:textSize="22sp"
+                                    android:gravity="center"
+                                    android:elevation="4dp"/>
+                                    
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:background="@drawable/ripple_effect"
+                                    android:elevation="4dp"/>
+                            </FrameLayout>
+                                
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Food"
+                                android:textSize="12sp"
+                                android:layout_marginTop="8dp"/>
+                        </LinearLayout>
+                        
+                        <!-- Transport -->
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_columnWeight="1"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:padding="8dp"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:background="?attr/selectableItemBackground">
+                            
+                            <FrameLayout
+                                android:layout_width="56dp"
+                                android:layout_height="56dp">
+                                
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:background="@android:color/holo_blue_light"
+                                    android:alpha="0.7"
+                                    android:text="🚗"
+                                    android:textSize="22sp"
+                                    android:gravity="center"
+                                    android:elevation="4dp"/>
+                                    
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:background="@drawable/ripple_effect"
+                                    android:elevation="4dp"/>
+                            </FrameLayout>
+                                
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Transport"
+                                android:textSize="12sp"
+                                android:layout_marginTop="8dp"/>
+                        </LinearLayout>
+                        
+                        <!-- Shopping -->
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_columnWeight="1"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:padding="8dp"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:background="?attr/selectableItemBackground">
+                            
+                            <FrameLayout
+                                android:layout_width="56dp"
+                                android:layout_height="56dp">
+                                
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:background="@android:color/holo_purple"
+                                    android:alpha="0.7"
+                                    android:text="🛍️"
+                                    android:textSize="22sp"
+                                    android:gravity="center"
+                                    android:elevation="4dp"/>
+                                    
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:background="@drawable/ripple_effect"
+                                    android:elevation="4dp"/>
+                            </FrameLayout>
+                                
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Shopping"
+                                android:textSize="12sp"
+                                android:layout_marginTop="8dp"/>
+                        </LinearLayout>
+                        
+                        <!-- Entertainment -->
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_columnWeight="1"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:padding="8dp"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:background="?attr/selectableItemBackground">
+                            
+                            <FrameLayout
+                                android:layout_width="56dp"
+                                android:layout_height="56dp">
+                                
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:background="@android:color/holo_orange_light"
+                                    android:alpha="0.7"
+                                    android:text="🎮"
+                                    android:textSize="22sp"
+                                    android:gravity="center"
+                                    android:elevation="4dp"/>
+                                    
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:background="@drawable/ripple_effect"
+                                    android:elevation="4dp"/>
+                            </FrameLayout>
+                                
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Entertainment"
+                                android:textSize="12sp"
+                                android:layout_marginTop="8dp"/>
+                        </LinearLayout>
+                    </GridLayout>
+                    
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="#E0E0E0"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="8dp"/>
+                        
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Most Used"
+                        android:textSize="12sp"
+                        android:textColor="@color/text_hint_color"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginBottom="8dp"/>
+                        
+                    <HorizontalScrollView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:scrollbars="none"
+                        android:overScrollMode="never">
+                        
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:padding="4dp">
+                            
+                            <!-- Additional categories as horizontal scrolling chips -->
+                            <com.google.android.material.chip.Chip
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Groceries"
+                                app:chipIcon="@android:drawable/ic_menu_preferences"
+                                app:chipIconTint="@color/primary"
+                                android:layout_marginEnd="8dp"
+                                style="@style/Widget.MaterialComponents.Chip.Choice"/>
+                                
+                            <com.google.android.material.chip.Chip
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Utilities"
+                                app:chipIcon="@android:drawable/ic_menu_preferences"
+                                app:chipIconTint="@color/primary"
+                                android:layout_marginEnd="8dp"
+                                style="@style/Widget.MaterialComponents.Chip.Choice"/>
+                                
+                            <com.google.android.material.chip.Chip
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Coffee"
+                                app:chipIcon="@android:drawable/ic_menu_preferences"
+                                app:chipIconTint="@color/primary"
+                                android:layout_marginEnd="8dp"
+                                style="@style/Widget.MaterialComponents.Chip.Choice"/>
+                                
+                            <com.google.android.material.chip.Chip
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Dining Out"
+                                app:chipIcon="@android:drawable/ic_menu_preferences"
+                                app:chipIconTint="@color/primary"
+                                style="@style/Widget.MaterialComponents.Chip.Choice"/>
+                        </LinearLayout>
+                    </HorizontalScrollView>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Date and Time Row -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="16dp">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="Date"
+                    app:startIconDrawable="@android:drawable/ic_menu_my_calendar"
+                    app:startIconTint="@color/primary"
+                    android:layout_marginEnd="8dp"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="none"
+                        android:text="Today"
+                        android:focusable="false"/>
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="Time"
+                    app:startIconDrawable="@android:drawable/ic_menu_recent_history"
+                    app:startIconTint="@color/primary"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="none"
+                        android:text="Now"
+                        android:focusable="false"/>
+                </com.google.android.material.textfield.TextInputLayout>
+            </LinearLayout>
+
+            <!-- Location with Map Preview -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Location"
+                app:startIconDrawable="@android:drawable/ic_menu_mylocation"
+                app:startIconTint="@color/primary"
+                android:layout_marginBottom="16dp"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Exchange Rate (for foreign transactions) -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Foreign Currency"
+                    android:textColor="@color/on_background"/>
+
+                <com.google.android.material.switchmaterial.SwitchMaterial
+                    android:id="@+id/foreign_currency_switch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"/>
+            </LinearLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Exchange Rate"
+                app:helperText="1 USD = ? foreign currency"
+                app:startIconDrawable="@android:drawable/ic_menu_rotate"
+                app:startIconTint="@color/primary"
+                android:layout_marginBottom="16dp"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="numberDecimal"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Tags Input -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Tags (separate with commas)"
+                app:startIconDrawable="@android:drawable/ic_menu_info_details"
+                app:startIconTint="@color/primary"
+                android:layout_marginBottom="16dp"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+            </com.google.android.material.textfield.TextInputLayout>
+            
+            <!-- Smart Prediction Section -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="24dp"
+                app:cardElevation="4dp"
+                android:layout_marginBottom="24dp">
+                
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+                    
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:layout_marginBottom="12dp">
+                        
+                        <ImageView
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:src="@android:drawable/ic_menu_sort_by_size"
+                            android:tint="@color/primary"
+                            android:layout_marginEnd="12dp"/>
+                            
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Smart Suggestions"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            android:textColor="@color/primary"/>
+                            
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="AI Powered"
+                            android:textSize="12sp"
+                            android:textColor="@android:color/white"
+                            android:background="@color/primary"
+                            android:paddingStart="8dp"
+                            android:paddingEnd="8dp"
+                            android:paddingTop="4dp"
+                            android:paddingBottom="4dp"/>
+                    </LinearLayout>
+                    
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Based on your spending patterns"
+                        android:textSize="12sp"
+                        android:textColor="@color/text_hint_color"
+                        android:layout_marginBottom="16dp"/>
+                        
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginBottom="8dp">
+                        
+                        <com.google.android.material.chip.Chip
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Starbucks - $4.50"
+                            app:chipIcon="@android:drawable/ic_menu_compass"
+                            app:chipIconTint="@color/primary"
+                            app:chipBackgroundColor="#EFEBE9"
+                            app:chipStrokeWidth="0dp"
+                            android:layout_marginEnd="8dp"
+                            style="@style/Widget.MaterialComponents.Chip.Action"/>
+                            
+                        <com.google.android.material.chip.Chip
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Uber - $12.99"
+                            app:chipIcon="@android:drawable/ic_menu_directions"
+                            app:chipIconTint="@color/primary"
+                            app:chipBackgroundColor="#E8EAF6"
+                            app:chipStrokeWidth="0dp"
+                            android:layout_marginEnd="8dp"
+                            style="@style/Widget.MaterialComponents.Chip.Action"/>
+                            
+                        <com.google.android.material.chip.Chip
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Netflix - $14.99"
+                            app:chipIcon="@android:drawable/ic_menu_view"
+                            app:chipIconTint="@color/primary"
+                            app:chipBackgroundColor="#E0F7FA"
+                            app:chipStrokeWidth="0dp"
+                            style="@style/Widget.MaterialComponents.Chip.Action"/>
+                    </LinearLayout>
+                    
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="#E0E0E0"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="8dp"/>
+                        
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Recurring this week"
+                        android:textSize="12sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/text_hint_color"
+                        android:layout_marginBottom="8dp"/>
+                        
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:background="#F5F5F5"
+                        android:padding="12dp">
+                        
+                        <ImageView
+                            android:layout_width="36dp"
+                            android:layout_height="36dp"
+                            android:src="@android:drawable/ic_menu_rotate"
+                            android:tint="@color/primary"
+                            android:layout_marginEnd="12dp"
+                            android:background="#E0E0E0"
+                            android:padding="8dp"/>
+                            
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+                            
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Spotify Premium"
+                                android:textColor="@color/on_background"
+                                android:textSize="14sp"/>
+                                
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Due in 2 days - Entertainment"
+                                android:textColor="@color/text_hint_color"
+                                android:textSize="12sp"/>
+                        </LinearLayout>
+                        
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="$9.99"
+                            android:textColor="@color/primary"
+                            android:textStyle="bold"
+                            android:textSize="16sp"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Budget Selection -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="BUDGET"
+                android:textStyle="bold"
+                android:textSize="14sp"
+                android:textColor="@color/primary"
+                android:layout_marginBottom="8dp"/>
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="0dp"
+                app:strokeWidth="1dp"
+                app:strokeColor="@color/text_hint_color"
+                android:layout_marginBottom="16dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <RadioGroup
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <RadioButton
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Monthly Essentials ($800 remaining)"
+                            android:textColor="@color/on_background"
+                            android:checked="true"
+                            android:layout_marginBottom="8dp"/>
+
+                        <RadioButton
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Entertainment ($250 remaining)"
+                            android:textColor="@color/on_background"
+                            android:layout_marginBottom="8dp"/>
+
+                        <RadioButton
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Savings Goal ($1,200 remaining)"
+                            android:textColor="@color/on_background"/>
+                    </RadioGroup>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Note Input -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Add Note"
+                app:startIconDrawable="@android:drawable/ic_menu_edit"
+                app:startIconTint="@color/primary"
+                android:layout_marginBottom="24dp"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textMultiLine"
+                    android:minLines="2"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Attachment Section -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="0dp"
+                app:strokeWidth="1dp"
+                app:strokeColor="@color/primary"
+                android:layout_marginBottom="24dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical">
+                        
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Attachments"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            android:textColor="@color/primary"/>
+                            
+                        <com.google.android.material.button.MaterialButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Auto Scan"
+                            app:icon="@android:drawable/ic_menu_camera"
+                            app:iconTint="@color/primary"
+                            style="@style/Widget.MaterialComponents.Button.TextButton"/>
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Add receipts or use AI to extract information"
+                        android:textSize="14sp"
+                        android:textColor="@color/text_hint_color"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginBottom="16dp"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="8dp">
+
+                        <Button
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="📷 Camera"
+                            android:layout_marginEnd="8dp"
+                            app:icon="@android:drawable/ic_menu_camera"
+                            app:iconTint="@color/primary"
+                            style="@style/Widget.MaterialComponents.Button.OutlinedButton"/>
+
+                        <Button
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="📁 Files"
+                            app:icon="@android:drawable/ic_menu_gallery"
+                            app:iconTint="@color/primary"
+                            style="@style/Widget.MaterialComponents.Button.OutlinedButton"/>
+
+                        <Button
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="📄 Scan"
+                            android:layout_marginStart="8dp"
+                            app:icon="@android:drawable/ic_menu_crop"
+                            app:iconTint="@color/primary"
+                            style="@style/Widget.MaterialComponents.Button.OutlinedButton"/>
+                    </LinearLayout>
+                    
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginTop="16dp"
+                        android:background="#F5F5F5"
+                        android:padding="12dp">
+                        
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Auto-extracted information"
+                            android:textStyle="bold"
+                            android:textSize="14sp"
+                            android:textColor="@color/primary"
+                            android:layout_marginBottom="8dp"/>
+                            
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Upload a receipt to extract date, amount, and category automatically."
+                            android:textSize="12sp"
+                            android:textColor="@color/text_hint_color"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Advanced Options Section -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="4dp"
+                android:layout_marginBottom="24dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Advanced Options"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/primary"
+                        android:layout_marginBottom="12dp"/>
+
+                    <!-- Recurring Transaction -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:layout_marginBottom="12dp">
+
+                        <ImageView
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:src="@android:drawable/ic_menu_rotate"
+                            android:tint="@color/primary"
+                            android:layout_marginEnd="16dp"/>
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Recurring Transaction"
+                            android:textColor="@color/on_background"/>
+
+                        <com.google.android.material.switchmaterial.SwitchMaterial
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+                    </LinearLayout>
+
+                    <!-- Split Expense -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:layout_marginBottom="12dp">
+
+                        <ImageView
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:src="@android:drawable/ic_menu_share"
+                            android:tint="@color/primary"
+                            android:layout_marginEnd="16dp"/>
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Split with Others"
+                            android:textColor="@color/on_background"/>
+
+                        <com.google.android.material.switchmaterial.SwitchMaterial
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+                    </LinearLayout>
+
+                    <!-- Exclude from Reports -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical">
+
+                        <ImageView
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:src="@android:drawable/ic_menu_close_clear_cancel"
+                            android:tint="@color/primary"
+                            android:layout_marginEnd="16dp"/>
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Exclude from Reports"
+                            android:textColor="@color/on_background"/>
+
+                        <com.google.android.material.switchmaterial.SwitchMaterial
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Action Buttons -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginBottom="24dp">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_save"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:text="Save Transaction"
+                    android:textSize="16sp"
+                    app:cornerRadius="30dp"
+                    app:icon="@android:drawable/ic_menu_save"
+                    app:iconGravity="textStart"
+                    app:iconPadding="8dp"
+                    android:stateListAnimator="@android:animator/fade_in"
+                    android:layout_marginBottom="12dp"
+                    style="@style/Widget.MaterialComponents.Button"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btn_save_new"
+                        android:layout_width="0dp"
+                        android:layout_height="48dp"
+                        android:layout_weight="1"
+                        android:text="Save &amp; New"
+                        android:textSize="14sp"
+                        app:cornerRadius="24dp"
+                        app:icon="@android:drawable/ic_menu_add"
+                        app:iconGravity="textStart"
+                        app:iconPadding="8dp"
+                        android:layout_marginEnd="8dp"
+                        style="@style/Widget.MaterialComponents.Button.OutlinedButton"/>
+                        
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btn_save_template"
+                        android:layout_width="0dp"
+                        android:layout_height="48dp"
+                        android:layout_weight="1"
+                        android:text="Save as Template"
+                        android:textSize="14sp"
+                        app:cornerRadius="24dp"
+                        app:icon="@android:drawable/ic_menu_agenda"
+                        app:iconGravity="textStart"
+                        app:iconPadding="8dp"
+                        style="@style/Widget.MaterialComponents.Button.OutlinedButton"/>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+    
+    <!-- Quick Action FAB -->
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab_quick_action"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="24dp"
+        app:fabSize="normal"
+        app:tint="@android:color/white"
+        android:backgroundTint="@color/primary"
+        android:src="@android:drawable/ic_menu_help"
+        app:borderWidth="0dp"
+        app:elevation="8dp"/>
+</androidx.coordinatorlayout.widget.CoordinatorLayout> 

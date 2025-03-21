@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Modern color scheme -->
+    <color name="primary">#2196F3</color>
+    <color name="primary_variant">#3700B3</color>
+    <color name="secondary">#03DAC6</color>
+    <color name="secondary_variant">#018786</color>
+    <color name="background">#F5F5F5</color>
+    <color name="surface">#FFFFFF</color>
+    <color name="error">#B00020</color>
+    <color name="on_primary">#FFFFFF</color>
+    <color name="on_secondary">#000000</color>
+    <color name="on_background">#212121</color>
+    <color name="on_surface">#000000</color>
+    <color name="on_error">#FFFFFF</color>
+    
+    <!-- Dark theme colors -->
+    <color name="primary_dark_theme">#BB86FC</color>
+    <color name="primary_variant_dark_theme">#3700B3</color>
+    <color name="secondary_dark_theme">#03DAC6</color>
+    <color name="secondary_variant_dark_theme">#018786</color>
+    <color name="background_dark_theme">#121212</color>
+    <color name="surface_dark_theme">#121212</color>
+    <color name="error_dark_theme">#CF6679</color>
+    <color name="on_primary_dark_theme">#000000</color>
+    <color name="on_secondary_dark_theme">#000000</color>
+    <color name="on_background_dark_theme">#FFFFFF</color>
+    <color name="on_surface_dark_theme">#FFFFFF</color>
+    <color name="on_error_dark_theme">#000000</color>
+    
+    <!-- Common colors -->
+    <color name="black">#000000</color>
+    <color name="white">#FFFFFF</color>
+    <color name="dark_gray">#424242</color>
+    <color name="medium_gray">#757575</color>
+    <color name="light_gray">#E0E0E0</color>
+    <color name="ultra_light_gray">#F5F5F5</color>
+    
+    <!-- Accent colors for categories -->
+    <color name="accent_blue">#2196F3</color>
+    <color name="accent_green">#4CAF50</color>
+    <color name="accent_orange">#FF9800</color>
+    <color name="accent_red">#F44336</color>
+    <color name="accent_purple">#9C27B0</color>
+    <color name="accent_yellow">#FFEB3B</color>
+    <color name="accent_cyan">#00BCD4</color>
+    <color name="accent_pink">#E91E63</color>
+    
+    <!-- UI element colors -->
+    <color name="text_primary">#212121</color>
+    <color name="text_secondary">#757575</color>
+    <color name="text_hint_color">#757575</color>
+    <color name="card_color">@color/white</color>
+    <color name="card_stroke">#E0E0E0</color>
+    <color name="transparent">#00000000</color>
+    
+    <!-- Chart colors -->
+    <color name="pie_chart_positive">@color/accent_green</color>
+    <color name="pie_chart_negative">@color/accent_red</color>
+    <color name="pie_chart_hole">@color/white</color>
+    <color name="bar_chart_positive">@color/accent_green</color>
+    <color name="bar_chart_negative">@color/accent_red</color>
+    <color name="pie_chart_precentage_color">@color/white</color>
+    
+    <!-- Legacy colors needed for backward compatibility -->
+    <color name="solid_button_color">@color/primary</color>
+    <color name="focused_stroke_button_color">@color/primary_variant</color>
+    <color name="stroke_button_color">@color/primary</color>
+    <color name="edit_text_solid">@color/ultra_light_gray</color>
+    <color name="edit_text_stroke">@color/light_gray</color>
+    <color name="transparent_color">@color/transparent</color>
+    <color name="primary_light">#9575CD</color>
+    <color name="primary_dark">@color/primary_variant</color>
+    <color name="secondary_light">#80CBC4</color>
+    <color name="secondary_dark">@color/secondary_variant</color>
+    <color name="expense_red">#F44336</color>
+</resources>

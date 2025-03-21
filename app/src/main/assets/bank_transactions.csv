@@ -1,0 +1,46 @@
+date,description,amount,balance
+2022-01-01,"Initial Balance",1500.00,1500.00
+2022-01-05,"Salary Deposit",2500.00,4000.00
+2022-01-06,"Grocery Store Purchase",-125.50,3874.50
+2022-01-07,"Coffee Shop",-4.75,3869.75
+2022-01-10,"Gas Station",-45.00,3824.75
+2022-01-12,"Phone Bill Payment",-89.99,3734.76
+2022-01-15,"Restaurant Dinner",-78.45,3656.31
+2022-01-17,"Online Shopping - Electronics",-199.99,3456.32
+2022-01-20,"Utility Bill Payment",-120.00,3336.32
+2022-01-22,"ATM Withdrawal",-200.00,3136.32
+2022-01-25,"Gym Membership",-50.00,3086.32
+2022-01-27,"Doctor's Appointment",-35.00,3051.32
+2022-01-29,"Movie Tickets",-24.50,3026.82
+2022-01-31,"Monthly Rent Payment",-1200.00,1826.82
+2022-02-01,"Insurance Premium",-105.75,1721.07
+2022-02-03,"Public Transport Pass",-65.00,1656.07
+2022-02-05,"Salary Deposit",2500.00,4156.07
+2022-02-07,"Grocery Store Purchase",-135.89,4020.18
+2022-02-08,"Bookstore Purchase",-45.99,3974.19
+2022-02-10,"Clothing Store Purchase",-89.95,3884.24
+2022-02-12,"Internet Bill Payment",-79.99,3804.25
+2022-02-14,"Valentine's Day Dinner",-95.50,3708.75
+2022-02-16,"Car Maintenance",-250.00,3458.75
+2022-02-18,"Coffee Shop",-6.50,3452.25
+2022-02-20,"Pharmacy Purchase",-32.75,3419.50
+2022-02-22,"Haircut",-30.00,3389.50
+2022-02-24,"Streaming Service Subscription",-14.99,3374.51
+2022-02-26,"Grocery Store Purchase",-112.67,3261.84
+2022-02-28,"Monthly Rent Payment",-1200.00,2061.84
+2022-03-01,"Mobile Phone Bill",-55.00,2006.84
+2022-03-03,"Gas Station",-48.50,1958.34
+2022-03-05,"Salary Deposit",2500.00,4458.34
+2022-03-07,"Restaurant Lunch",-22.50,4435.84
+2022-03-09,"Grocery Store Purchase",-142.35,4293.49
+2022-03-11,"Online Shopping - Home Goods",-78.95,4214.54
+2022-03-13,"Electric Bill Payment",-95.45,4119.09
+2022-03-15,"Fitness Equipment",-149.99,3969.10
+2022-03-17,"Coffee Shop",-5.25,3963.85
+2022-03-19,"Pet Supplies",-65.78,3898.07
+2022-03-21,"Gas Station",-42.50,3855.57
+2022-03-23,"Restaurant Dinner",-65.89,3789.68
+2022-03-25,"Concert Tickets",-120.00,3669.68
+2022-03-27,"Grocery Store Purchase",-98.45,3571.23
+2022-03-29,"Dentist Appointment",-75.00,3496.23
+2022-03-31,"Monthly Rent Payment",-1200.00,2296.23 

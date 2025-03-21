@@ -1,0 +1,142 @@
+<resources>
+    <string name="app_name">Trackyyy</string>
+    <string name="title_home">Home</string>
+    <string name="title_transaction">Add Transaction</string>
+    <string name="title_summary">Summary</string>
+    <string name="transaction_type_text">Select transaction type:</string>
+    <string name="income">Income</string>
+    <string name="expense">Expense</string>
+    <string name="transaction_category_text">Enter transaction category:</string>
+    <string name="transaction_amount_text">Enter transaction amount:</string>
+    <string name="transaction_category_hint">Transaction category</string>
+    <string name="transaction_amount_hint">Transaction amount</string>
+    <string name="transaction_date_text">Select transaction date:</string>
+    <string name="select_date_button_text">Select Date</string>
+    <string name="transaction_button_text">Add Transaction</string>
+    <string name="select_date_reset_text">Select Date</string>
+    <string name="type">Type</string>
+    <string name="category">Category</string>
+    <string name="amount">Amount</string>
+    <string name="date">Date</string>
+    <string name="transaction_header">Add Transaction</string>
+    <string name="edit_transaction_header">Edit Transaction</string>
+    <string name="change_transaction_btn_text">Change Transaction</string>
+    <string name="transaction_history_heading">Transaction History</string>
+    <string name="greeting_help">Stay on track, save more!</string>
+    <string name="good_morning_text">Good Morning</string>
+    <string name="good_afternoon_text">Good Afternoon</string>
+    <string name="good_evening_text">Good Evening</string>
+    <string name="good_night_text">Good Night</string>
+    <string name="app_logo_image">App Logo</string>
+    <string name="pie_chart_no_data_text">No financial data available</string>
+    <string name="pie_chart_label">Financial Data</string>
+    <string name="table_column_type">Type</string>
+    <string name="table_column_category">Category</string>
+    <string name="table_column_amount">Amount</string>
+    <string name="table_column_date">Date</string>
+    <string name="pie_chart_header">Total Income/ Expense</string>
+    <string name="bar_graph_header">Net Income/ Expense</string>
+    <string name="save_to_pdf_button_text">Save to PDF</string>
+    <string name="search_btn_text">Search</string>
+    <string name="edit_year_text">Enter year</string>
+    <string name="enter_year_text">Enter year:</string>
+    <string name="edit_month_text">Enter month</string>
+    <string name="enter_month_text">Enter month</string>
+    <string name="edit_date_text">Enter date</string>
+    <string name="enter_date_text">Enter date:</string>
+    <string name="splash_app_logo_image">Splash app logo</string>
+    <string name="splash_credit_from">Created By</string>
+    <string name="splash_creator_name">Tojin &amp; Jaiby</string>
+    
+    <!-- Login and Registration Strings -->
+    <string name="login_title">Login</string>
+    <string name="login_subtitle">Sign in to manage your budget</string>
+    <string name="email_hint">Email</string>
+    <string name="password_hint">Password</string>
+    <string name="login_button">Login</string>
+    <string name="register_prompt">Don\'t have an account? Register</string>
+    <string name="register_title">Create Account</string>
+    <string name="username_hint">Username</string>
+    <string name="confirm_password_hint">Confirm Password</string>
+    <string name="register_button">Register</string>
+    <string name="login_prompt">Already have an account? Login</string>
+    <string name="error_empty_fields">Please fill all fields</string>
+    <string name="error_passwords_dont_match">Passwords don\'t match</string>
+    <string name="error_user_exists">User already exists</string>
+    <string name="error_invalid_credentials">Invalid email or password</string>
+    <string name="success_registration">Registration successful</string>
+    <string name="logout">Logout</string>
+    
+    <!-- Font families -->
+    <string name="font_family_light">sans-serif-light</string>
+    <string name="font_family_regular">sans-serif</string>
+    <string name="font_family_medium">sans-serif-medium</string>
+    <string name="font_family_bold">sans-serif-bold</string>
+    
+    <!-- New strings from the code block -->
+    <string name="current_balance">Current Balance</string>
+    <string name="monthly_summary">Monthly Summary</string>
+    <string name="expenses">Expenses</string>
+    <string name="view_all">View All</string>
+    <string name="add_transaction">Add Transaction</string>
+    
+    <!-- Splash Screen -->
+    <string name="app_tagline">Track Your Finances Smarter</string>
+    
+    <!-- New Screens -->
+    <string name="title_expense_details">Expense Details</string>
+    <string name="title_bank_import">Import Statement</string>
+    <string name="title_notifications">Notifications</string>
+    
+    <!-- Bank Import -->
+    <string name="import_csv">Import CSV</string>
+    <string name="import_pdf">Import PDF</string>
+    <string name="select_file">Select File</string>
+    <string name="import_instructions">Select a bank statement file to import</string>
+    <string name="csv_import_description">Import transactions from a CSV file exported from your bank</string>
+    <string name="pdf_import_description">Import transactions from a PDF bank statement</string>
+    <string name="import_kaggle_demo">Import Demo Data</string>
+    <string name="kaggle_demo_description">Import sample bank transaction data from Kaggle dataset</string>
+    <string name="import_demo_data">Load Demo Data</string>
+    <string name="importing_data">Importing data...</string>
+    <string name="importing_demo_data">Importing demo data...</string>
+    <string name="import_success">Successfully imported %d transactions</string>
+    <string name="import_failed">Failed to import data</string>
+    <string name="import_demo_success">Successfully imported %d demo transactions</string>
+    <string name="import_demo_failed">Failed to import demo data</string>
+    
+    <!-- Budget Management -->
+    <string name="set_budget">Set Budget</string>
+    <string name="budget_name">Budget Name</string>
+    <string name="budget_amount">Budget Amount</string>
+    <string name="budget_period">Budget Period</string>
+    <string name="daily">Daily</string>
+    <string name="weekly">Weekly</string>
+    <string name="monthly">Monthly</string>
+    <string name="yearly">Yearly</string>
+    
+    <!-- Notifications -->
+    <string name="enable_notifications">Enable Notifications</string>
+    <string name="budget_alerts">Budget Alerts</string>
+    <string name="unusual_spending">Unusual Spending Alerts</string>
+    <string name="payment_reminders">Payment Reminders</string>
+    
+    <!-- Bottom Navigation -->
+    <string name="title_transactions">Transactions</string>
+    <string name="title_add">Add</string>
+    <string name="title_budget">Budget</string>
+    <string name="title_more">More</string>
+    
+    <!-- Screen Titles -->
+    <string name="title_profile">Profile</string>
+    <string name="title_insights">Insights</string>
+    <string name="title_receipt_scanner">Receipt Scanner</string>
+    <string name="title_add_expense">Add Expense</string>
+    <string name="title_budget_management">Budget Management</string>
+    <string name="title_monthly_summary">Monthly Summary</string>
+    
+    <!-- Add Expense Screen -->
+    <string name="expense_description_hint">Description</string>
+    <string name="ai_suggest_button">AI Suggest</string>
+    <string name="save_expense_button">Save Expense</string>
+</resources>

@@ -1,0 +1,87 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <style name="Theme.Trackyyy" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Primary brand colors -->
+        <item name="colorPrimary">@color/purple_200</item>
+        <item name="colorPrimaryVariant">@color/purple_700</item>
+        <item name="colorOnPrimary">@color/black</item>
+        
+        <!-- Secondary brand colors -->
+        <item name="colorSecondary">@color/teal_200</item>
+        <item name="colorSecondaryVariant">@color/teal_200</item>
+        <item name="colorOnSecondary">@color/black</item>
+        
+        <!-- Status bar color -->
+        <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
+        
+        <!-- Text appearance -->
+        <item name="textAppearanceHeadline1">@style/TextAppearance.Trackyyy.Headline1.Dark</item>
+        <item name="textAppearanceHeadline2">@style/TextAppearance.Trackyyy.Headline2.Dark</item>
+        <item name="textAppearanceHeadline3">@style/TextAppearance.Trackyyy.Headline3.Dark</item>
+        <item name="textAppearanceBody1">@style/TextAppearance.Trackyyy.Body1.Dark</item>
+        <item name="textAppearanceBody2">@style/TextAppearance.Trackyyy.Body2.Dark</item>
+        <item name="textAppearanceButton">@style/TextAppearance.Trackyyy.Button.Dark</item>
+        
+        <!-- Shape appearance -->
+        <item name="shapeAppearanceSmallComponent">@style/ShapeAppearance.Trackyyy.SmallComponent</item>
+        <item name="shapeAppearanceMediumComponent">@style/ShapeAppearance.Trackyyy.MediumComponent</item>
+        <item name="shapeAppearanceLargeComponent">@style/ShapeAppearance.Trackyyy.LargeComponent</item>
+        
+        <!-- Widget styles -->
+        <item name="bottomNavigationStyle">@style/Widget.Trackyyy.BottomNavigation</item>
+        <item name="materialButtonStyle">@style/Widget.Trackyyy.Button</item>
+        <item name="textInputStyle">@style/Widget.Trackyyy.TextInputLayout</item>
+        <item name="materialCardViewStyle">@style/Widget.Trackyyy.CardView</item>
+    </style>
+    
+    <!-- Splash screen theme -->
+    <style name="Theme.App.Splash" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="android:windowBackground">@color/black</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="colorPrimary">@color/purple_200</item>
+        <item name="colorPrimaryVariant">@color/purple_700</item>
+    </style>
+    
+    <!-- Text styles -->
+    <style name="TextAppearance.Trackyyy.Headline1.Dark" parent="TextAppearance.MaterialComponents.Headline1">
+        <item name="fontFamily">sans-serif-light</item>
+        <item name="android:fontFamily">sans-serif-light</item>
+        <item name="android:textSize">28sp</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+    
+    <style name="TextAppearance.Trackyyy.Headline2.Dark" parent="TextAppearance.MaterialComponents.Headline2">
+        <item name="fontFamily">sans-serif</item>
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="android:textSize">24sp</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+    
+    <style name="TextAppearance.Trackyyy.Headline3.Dark" parent="TextAppearance.MaterialComponents.Headline3">
+        <item name="fontFamily">sans-serif</item>
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+    
+    <style name="TextAppearance.Trackyyy.Body1.Dark" parent="TextAppearance.MaterialComponents.Body1">
+        <item name="fontFamily">sans-serif</item>
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+    
+    <style name="TextAppearance.Trackyyy.Body2.Dark" parent="TextAppearance.MaterialComponents.Body2">
+        <item name="fontFamily">sans-serif</item>
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+    
+    <style name="TextAppearance.Trackyyy.Button.Dark" parent="TextAppearance.MaterialComponents.Button">
+        <item name="fontFamily">sans-serif-medium</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+</resources>

@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_home">
+
+    <!-- Main Bottom Nav Destinations -->
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="com.hirumitha.budget.buddy.fragments.home.HomeFragment"
+        android:label="@string/title_home"
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/action_home_to_expense_details"
+            app:destination="@id/navigation_expense_details" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_transactions"
+        android:name="com.hirumitha.budget.buddy.fragments.transaction.TransactionFragment"
+        android:label="@string/title_transactions"
+        tools:layout="@layout/fragment_transaction">
+        <action
+            android:id="@+id/action_transactions_to_expense_details"
+            app:destination="@id/navigation_expense_details" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_add"
+        android:name="com.hirumitha.budget.buddy.fragments.add.AddExpenseOptionsFragment"
+        android:label="@string/title_add"
+        tools:layout="@layout/fragment_add_expense_options">
+        <action
+            android:id="@+id/action_add_to_manual_expense"
+            app:destination="@id/navigation_add_expense" />
+        <action
+            android:id="@+id/action_add_to_receipt_scanner"
+            app:destination="@id/navigation_receipt_scanner" />
+        <action
+            android:id="@+id/action_add_to_bank_import"
+            app:destination="@id/navigation_bank_import" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_budget"
+        android:name="com.hirumitha.budget.buddy.fragments.BudgetManagementFragment"
+        android:label="@string/title_budget_management"
+        tools:layout="@layout/fragment_budget_management" />
+
+    <fragment
+        android:id="@+id/navigation_more"
+        android:name="com.hirumitha.budget.buddy.fragments.more.MoreOptionsFragment"
+        android:label="@string/title_more"
+        tools:layout="@layout/fragment_more_options">
+        <action
+            android:id="@+id/action_more_to_profile"
+            app:destination="@id/navigation_profile" />
+        <action
+            android:id="@+id/action_more_to_insights"
+            app:destination="@id/navigation_insights" />
+        <action
+            android:id="@+id/action_more_to_notifications"
+            app:destination="@id/navigation_notifications" />
+    </fragment>
+
+    <!-- Secondary Destinations -->
+    <fragment
+        android:id="@+id/navigation_expense_details"
+        android:name="com.hirumitha.budget.buddy.fragments.ExpenseDetailsFragment"
+        android:label="@string/title_expense_details"
+        tools:layout="@layout/fragment_expense_details" />
+
+    <fragment
+        android:id="@+id/navigation_add_expense"
+        android:name="com.hirumitha.budget.buddy.fragments.add.AddExpenseFragment"
+        android:label="@string/title_add_expense"
+        tools:layout="@layout/fragment_add_expense" />
+
+    <fragment
+        android:id="@+id/navigation_receipt_scanner"
+        android:name="com.hirumitha.budget.buddy.fragments.ReceiptScannerFragment"
+        android:label="@string/title_receipt_scanner"
+        tools:layout="@layout/fragment_receipt_scanner" />
+
+    <fragment
+        android:id="@+id/navigation_bank_import"
+        android:name="com.hirumitha.budget.buddy.fragments.BankImportFragment"
+        android:label="@string/title_bank_import"
+        tools:layout="@layout/fragment_bank_import" />
+
+    <fragment
+        android:id="@+id/navigation_profile"
+        android:name="com.hirumitha.budget.buddy.fragments.profile.ProfileFragment"
+        android:label="@string/title_profile"
+        tools:layout="@layout/fragment_profile" />
+
+    <fragment
+        android:id="@+id/navigation_insights"
+        android:name="com.hirumitha.budget.buddy.fragments.InsightsFragment"
+        android:label="@string/title_insights"
+        tools:layout="@layout/fragment_insights" />
+
+    <fragment
+        android:id="@+id/navigation_notifications"
+        android:name="com.hirumitha.budget.buddy.fragments.NotificationsFragment"
+        android:label="@string/title_notifications"
+        tools:layout="@layout/fragment_notifications" />
+
+    <!-- Other existing fragments -->
+    <fragment
+        android:id="@+id/navigation_monthly_expense"
+        android:name="com.hirumitha.budget.buddy.fragments.monthly.MonthlyExpenseFragment"
+        android:label="@string/title_monthly_summary"
+        tools:layout="@layout/fragment_monthly_expense" />
+
+    <fragment
+        android:id="@+id/navigation_summary"
+        android:name="com.hirumitha.budget.buddy.fragments.summary.SummaryFragment"
+        android:label="@string/title_summary"
+        tools:layout="@layout/fragment_summary" />
+
+    <fragment
+        android:id="@+id/navigation_splash"
+        android:name="com.hirumitha.budget.buddy.fragments.SplashFragment"
+        android:label="Splash Screen"
+        tools:layout="@layout/fragment_splash" />
+</navigation>
